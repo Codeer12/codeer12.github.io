@@ -21,6 +21,11 @@ function signIn() {
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider);
 }
+function signIn2() {
+  // Sign in Firebase using popup auth and Google as the identity provider.
+  var provider = new firebase.auth.EmailAuthProvider.PROVIDER_ID,();
+  firebase.auth().signInWithPopup(provider);
+}
 // Initiate firebase auth.
 function initFirebaseAuth() {
   // Listen to auth state changes.
@@ -330,6 +335,7 @@ var mediaCaptureElement = document.getElementById('mediaCapture');
 var userPicElement = document.getElementById('user-pic');
 var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
+var signInButtonElement = document.getElementById('sign-in-2');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
