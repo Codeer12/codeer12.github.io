@@ -1,7 +1,22 @@
 <html>
   <head>
+    <title>Classes"</title>
     <script>
-      window.location.href = "/web/public/index"
+      $('input[name=link_to_website]').blur(function(){
+  $('#iframe').src( this.value );
+});
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
+  <body>
+    
+
+    <h1>Pick a game</h1>
+<iframe id="iframe" width="1000" height="720" />
+
+
+<form method="post">
+  <input type="text" name="link_to_website" placeholder="First Name" required="required" class="input-txt" />
+</form>
+  </body>
 </html>
